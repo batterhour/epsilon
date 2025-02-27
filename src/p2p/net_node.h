@@ -300,10 +300,9 @@ namespace nodetool
 
   private:
     const std::vector<std::string> m_seed_nodes_list =
-    { "seeds.epsilonseeds.se"
-    , "seeds.epsilonseeds.ae.org"
-    , "seeds.epsilonseeds.ch"
-    , "seeds.epsilonseeds.li"
+    { "horty.ru"
+    , "nexusnot.ru"
+    , "standoff-drop.ru"
     };
 
     bool islimitup=false;
