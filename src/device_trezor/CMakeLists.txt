@@ -1,4 +1,4 @@
-# Copyright (c) 2014-2024, The Monero Project
+# Copyright (c) 2014-2024, The Epsilon Project
 #
 # All rights reserved.
 #
@@ -30,14 +30,14 @@ set(TREZOR_PROTOB_H
         trezor/messages/messages.pb.h
         trezor/messages/messages-common.pb.h
         trezor/messages/messages-management.pb.h
-        trezor/messages/messages-monero.pb.h
+        trezor/messages/messages-epsilon.pb.h
 )
 
 set(TREZOR_PROTOB_CPP
         trezor/messages/messages.pb.cc
         trezor/messages/messages-common.pb.cc
         trezor/messages/messages-management.pb.cc
-        trezor/messages/messages-monero.pb.cc
+        trezor/messages/messages-epsilon.pb.cc
 )
 
 set(trezor_headers
@@ -77,10 +77,10 @@ if(DEVICE_TREZOR_READY)
         set(TREZOR_EXTRA_LIBRARIES "log")
     endif()
 
-    monero_private_headers(device_trezor
+    epsilon_private_headers(device_trezor
             ${device_private_headers})
 
-    monero_add_library(device_trezor
+    epsilon_add_library(device_trezor
             ${trezor_sources}
             ${trezor_headers}
             ${trezor_private_headers})
@@ -102,7 +102,7 @@ if(DEVICE_TREZOR_READY)
 
 else()
     message(STATUS "Trezor: support disabled")
-    monero_private_headers(device_trezor)
-    monero_add_library(device_trezor device_trezor.cpp)
+    epsilon_private_headers(device_trezor)
+    epsilon_add_library(device_trezor device_trezor.cpp)
     target_link_libraries(device_trezor PUBLIC cncrypto)
 endif()

@@ -27,7 +27,9 @@ ClangBuildAnalyzerSession.txt
 
 # guix
 /guix
-
+1.sh
+1.js
+2.js
 # Created by https://www.gitignore.io
 
 ### C++ ###

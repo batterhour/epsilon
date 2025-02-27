@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2024, The Monero Project
+// Copyright (c) 2014-2024, The Epsilon Project
 // 
 // All rights reserved.
 // 
@@ -35,12 +35,12 @@
 
 #include <string>
 
-#undef MONERO_DEFAULT_LOG_CATEGORY
-#define MONERO_DEFAULT_LOG_CATEGORY "daemon"
+#undef EPSILON_DEFAULT_LOG_CATEGORY
+#define EPSILON_DEFAULT_LOG_CATEGORY "daemon"
 
 namespace daemonize
 {
-  std::string const t_executor::NAME = "Monero Daemon";
+  std::string const t_executor::NAME = "Epsilon Daemon";
 
   void t_executor::init_options(
       boost::program_options::options_description & configurable_options
@@ -58,7 +58,7 @@ namespace daemonize
       boost::program_options::variables_map const & vm
     )
   {
-    LOG_PRINT_L0("Monero '" << MONERO_RELEASE_NAME << "' (v" << MONERO_VERSION_FULL << ") Daemonised");
+    LOG_PRINT_L0("Epsilon '" << EPSILON_RELEASE_NAME << "' (v" << EPSILON_VERSION_FULL << ") Daemonised");
     return t_daemon{vm, public_rpc_port};
   }
 

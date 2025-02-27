@@ -1,4 +1,4 @@
-// Copyright (c) 2016-2024, Monero Research Labs
+// Copyright (c) 2016-2024, Epsilon Research Labs
 //
 // Author: Shen Noether <shen.noether@gmx.com>
 // 
@@ -35,8 +35,8 @@
 using namespace crypto;
 using namespace std;
 
-#undef MONERO_DEFAULT_LOG_CATEGORY
-#define MONERO_DEFAULT_LOG_CATEGORY "ringct"
+#undef EPSILON_DEFAULT_LOG_CATEGORY
+#define EPSILON_DEFAULT_LOG_CATEGORY "ringct"
 
 namespace rct {
 
@@ -92,7 +92,7 @@ namespace rct {
         printf("]");
         printf("\n");
     }
-    void dp(xmr_amount vali) {
+    void dp(eps_amount vali) {
         printf("x: ");
         std::cout << vali;
         printf("\n\n");
@@ -117,20 +117,20 @@ namespace rct {
     //Various Conversions 
     
     //uint long long to 32 byte key
-    void d2h(key & amounth, const xmr_amount in) {
+    void d2h(key & amounth, const eps_amount in) {
         sc_0(amounth.bytes);
         memcpy_swap64le(amounth.bytes, &in, 1);
     }
     
     //uint long long to 32 byte key
-    key d2h(const xmr_amount in) {
+    key d2h(const eps_amount in) {
         key amounth;
         d2h(amounth, in);
         return amounth;
     }
 
     //uint long long to int[64]
-    void d2b(bits  amountb, xmr_amount val) {
+    void d2b(bits  amountb, eps_amount val) {
         int i = 0;
         while (i < 64) {
             amountb[i++] = val & 1;
@@ -141,11 +141,11 @@ namespace rct {
     //32 byte key to uint long long
     // if the key holds a value > 2^64
     // then the value in the first 8 bytes is returned    
-    xmr_amount h2d(const key & test) {
-        xmr_amount vali = 0;
+    eps_amount h2d(const key & test) {
+        eps_amount vali = 0;
         int j = 0;
         for (j = 7; j >= 0; j--) {
-            vali = (xmr_amount)(vali * 256 + (unsigned char)test.bytes[j]);
+            vali = (eps_amount)(vali * 256 + (unsigned char)test.bytes[j]);
         }
         return vali;
     }
@@ -179,11 +179,11 @@ namespace rct {
     }
     
     //int[64] to uint long long
-    xmr_amount b2d(bits amountb) {
-        xmr_amount vali = 0;
+    eps_amount b2d(bits amountb) {
+        eps_amount vali = 0;
         int j = 0;
         for (j = 63; j >= 0; j--) {
-            vali = (xmr_amount)(vali * 2 + amountb[j]);
+            vali = (eps_amount)(vali * 2 + amountb[j]);
         }
         return vali;
     }

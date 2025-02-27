@@ -1,4 +1,4 @@
-// Copyright (c) 2016-2024, Monero Research Labs
+// Copyright (c) 2016-2024, Epsilon Research Labs
 //
 // Author: Shen Noether <shen.noether@gmx.com>
 //
@@ -34,8 +34,8 @@
 using namespace crypto;
 using namespace std;
 
-#undef MONERO_DEFAULT_LOG_CATEGORY
-#define MONERO_DEFAULT_LOG_CATEGORY "ringct"
+#undef EPSILON_DEFAULT_LOG_CATEGORY
+#define EPSILON_DEFAULT_LOG_CATEGORY "ringct"
 
 #define CHECK_AND_ASSERT_THROW_MES_L1(expr, message) {if(!(expr)) {MWARNING(message); throw std::runtime_error(message);}}
 
@@ -293,12 +293,12 @@ namespace rct {
     }
 
     //generates C =aG + bH from b, a is given..
-    void genC(key & C, const key & a, xmr_amount amount) {
+    void genC(key & C, const key & a, eps_amount amount) {
         addKeys2(C, a, d2h(amount), rct::H);
     }
 
     //generates a <secret , public> / Pedersen commitment to the amount
-    tuple<ctkey, ctkey> ctskpkGen(xmr_amount amount) {
+    tuple<ctkey, ctkey> ctskpkGen(eps_amount amount) {
         ctkey sk, pk;
         skpkGen(sk.dest, pk.dest);
         skpkGen(sk.mask, pk.mask);
@@ -318,7 +318,7 @@ namespace rct {
         return make_tuple(sk, pk);
     }
     
-    key zeroCommit(xmr_amount amount) {
+    key zeroCommit(eps_amount amount) {
         const zero_commitment *begin = zero_commitments;
         const zero_commitment *end = zero_commitments + sizeof(zero_commitments) / sizeof(zero_commitments[0]);
         const zero_commitment value{amount, rct::zero()};
@@ -332,14 +332,14 @@ namespace rct {
         return addKeys(G, bH);
     }
 
-    key commit(xmr_amount amount, const key &mask) {
+    key commit(eps_amount amount, const key &mask) {
         key c;
         genC(c, mask, amount);
         return c;
     }
 
     //generates a random uint long long (for testing)
-    xmr_amount randXmrAmount(xmr_amount upperlimit) {
+    eps_amount randEpsAmount(eps_amount upperlimit) {
         return h2d(skGen()) % (upperlimit);
     }
 

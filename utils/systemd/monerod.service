@@ -1,16 +1,16 @@
 [Unit]
-Description=Monero Full Node
+Description=Epsilon Full Node
 After=network-online.target
 
 [Service]
-User=monero
-Group=monero
+User=epsilon
+Group=epsilon
 WorkingDirectory=~
-StateDirectory=monero
-LogsDirectory=monero
+StateDirectory=epsilon
+LogsDirectory=epsilon
 
 Type=simple
-ExecStart=/usr/bin/monerod --config-file /etc/monerod.conf --non-interactive
+ExecStart=/usr/bin/epsilond --config-file /etc/epsilond.conf --non-interactive
 StandardOutput=null
 StandardError=null
 

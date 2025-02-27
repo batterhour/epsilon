@@ -1,25 +1,25 @@
-# Monero hard-fork release check-list
+# Epsilon hard-fork release check-list
 
 - [ ] Security audit
 - [ ] Code audit
 - [ ] Ledger integration
   - [ ] Ledger notified
-  - [ ] Pull request made against Monero codebase (if needed)
-  - [ ] Pull request merged into Monero codebase (if needed)
+  - [ ] Pull request made against Epsilon codebase (if needed)
+  - [ ] Pull request merged into Epsilon codebase (if needed)
   - [ ] Ledger app integration coded
-  - [ ] Ledger Monero app update available
+  - [ ] Ledger Epsilon app update available
 - [ ] Trezor integration
   - [ ] Trezor notified
-  - [ ] Pull request made against Monero codebase (if needed)
-  - [ ] Pull request merged into Monero codebase (if needed)
+  - [ ] Pull request made against Epsilon codebase (if needed)
+  - [ ] Pull request merged into Epsilon codebase (if needed)
   - [ ] Trezor firmware update coded
   - [ ] Trezor firmware update available
 - [ ] Fork height set
   - [ ] Twitter announcement
   - [ ] Reddit announcement
-  - [ ] Getmonero.org announcement
+  - [ ] Getepsilon.org announcement
 - [ ] Notify wallets
-  - [ ] MyMonero
+  - [ ] MyEpsilon
   - [ ] Coinomi
   - [ ] Exa Wallet
   - [ ] Wookey Wallet
@@ -30,20 +30,20 @@
   - [ ] Monerujo
   - [ ] Edge Wallet
   - [ ] Exodus
-  - [ ] XMRWallet
+  - [ ] EPSWallet
   - [ ] Feather Wallet
 - [ ] Notify exchanges
-  - [ ] https://www.getmonero.org/community/merchants/#exchanges
+  - [ ] https://www.getepsilon.org/community/merchants/#exchanges
 - [ ] Notify 3rd party payment processors
-  - [ ] https://www.getmonero.org/community/merchants/#payment-gateways
+  - [ ] https://www.getepsilon.org/community/merchants/#payment-gateways
   - [ ] BTCPayServer
 - [ ] Notify mining pools
-  - [ ] https://miningpoolstats.stream/monero
+  - [ ] https://miningpoolstats.stream/epsilon
 - [ ] Release branch created
   - [ ] Update src/version.cpp.in with new version AND new name (if necessary)
-  - [ ] Update README.md with new fork table entry (or at least update the Recommended Monero version)
+  - [ ] Update README.md with new fork table entry (or at least update the Recommended Epsilon version)
   - [ ] Update src/checkpoints/checkpoints.cpp with a recent hardcoded checkpoint
-  - [ ] Update src/blocks/checkpoints.dat with ./monero-blockchain-export --output-file checkpoints.dat --block-stop <recent block height> --blocksdat
+  - [ ] Update src/blocks/checkpoints.dat with ./epsilon-blockchain-export --output-file checkpoints.dat --block-stop <recent block height> --blocksdat
   - [ ] Update expected_block_hashes_hash in src/cryptonote_core/blockchain.cpp with checkpoints.dat sha256 hash
 - [ ] Testnet forked
 - [ ] Testnet testing/verification
@@ -58,21 +58,21 @@
   - [ ] Release-specific testing
 - [ ] CLI reproducible builds validated
 - [ ] CLI released
-  - [ ] https://www.getmonero.org/downloads/ updated
+  - [ ] https://www.getepsilon.org/downloads/ updated
   - [ ] Update hashes.txt on website
   - [ ] Update downloads.yml on website
   - [ ] Update auto-update DNS records
   - [ ] Update redirects on downloads box
   - [ ] Update seed nodes
 - [ ] GUI released
-  - [ ] https://www.getmonero.org/downloads/ updated
+  - [ ] https://www.getepsilon.org/downloads/ updated
   - [ ] Update hashes.txt on website
   - [ ] Update hashes.txt.sig on website
   - [ ] Update downloads.yml on website
   - [ ] Update auto-update DNS records
   - [ ] Update redirects on downloads box
 - [ ] Release Announcements
-  - [ ] Monero-announce mailer notice
+  - [ ] Epsilon-announce mailer notice
   - [ ] Twitter announcement
   - [ ] Reddit announcement
-  - [ ] Getmonero.org announcement
+  - [ ] Getepsilon.org announcement

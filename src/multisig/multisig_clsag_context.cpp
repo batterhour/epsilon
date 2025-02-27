@@ -1,4 +1,4 @@
-// Copyright (c) 2021-2024, The Monero Project
+// Copyright (c) 2021-2024, The Epsilon Project
 // 
 // All rights reserved.
 // 
@@ -39,8 +39,8 @@
 #include <string>
 #include <vector>
 
-#undef MONERO_DEFAULT_LOG_CATEGORY
-#define MONERO_DEFAULT_LOG_CATEGORY "multisig"
+#undef EPSILON_DEFAULT_LOG_CATEGORY
+#define EPSILON_DEFAULT_LOG_CATEGORY "multisig"
 
 namespace multisig {
 

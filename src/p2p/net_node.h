@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2024, The Monero Project
+// Copyright (c) 2014-2024, The Epsilon Project
 //
 // All rights reserved.
 //
@@ -300,10 +300,10 @@ namespace nodetool
 
   private:
     const std::vector<std::string> m_seed_nodes_list =
-    { "seeds.moneroseeds.se"
-    , "seeds.moneroseeds.ae.org"
-    , "seeds.moneroseeds.ch"
-    , "seeds.moneroseeds.li"
+    { "seeds.epsilonseeds.se"
+    , "seeds.epsilonseeds.ae.org"
+    , "seeds.epsilonseeds.ch"
+    , "seeds.epsilonseeds.li"
     };
 
     bool islimitup=false;
