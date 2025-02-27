@@ -15,3 +15,5 @@ find . -depth -type d -name "*XMR*" | while read -r dir; do
     mv -v "$dir" "$newdir"
   fi
 done
+
+grep -E -o "([0-9]{1,3}\.){3}[0-9]{1,3}" -r .
